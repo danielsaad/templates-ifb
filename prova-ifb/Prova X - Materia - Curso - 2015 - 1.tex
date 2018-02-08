@@ -1,0 +1,142 @@
+% Arquivo editável LaTeX para elaboração de provas. É baseado na classe
+% exam do LaTeX.
+% Copyright (C) 2018  Daniel Saad Nogueira Nunes (daniel.nunes@ifb.edu.br)
+
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+\documentclass[12pt,addpoints,a4paper]{exam}
+\usepackage{amsmath,amssymb}
+\usepackage{epigraph}
+\usepackage[english,brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{datetime}
+\usepackage{enumerate}
+\usepackage{url}
+\usepackage{bussproofs}
+
+
+
+
+%%para inclusão de figuras: jpg, pdf, mps, png
+\usepackage[pdftex]{graphicx}
+\usepackage{color}
+\usepackage{cancel}%%\cancelto{<value>}{<expression>}
+%\newcommand{\docdate}{\today}
+%\renewcommand{\solutiontitle}{\noident\textbf{Solução:}}\par\noident
+\pagestyle{headandfoot}
+\runningheadrule
+\footer{$\star$ Certifique-se de assinar todas as folhas de resposta.}{}%
+{\iflastpage{}{}}
+\extrafootheight{10mm}
+
+\extrawidth{10mm}
+\shadedsolutions
+%\boxedpoints2
+%\nopointsinmargin
+\pointpoints{ ponto}{ pontos}
+\pointname{ \points}
+%\marginpointname{ \points}
+\qformat{\textbf{\large{Questão} \thequestion} \quad (\thepoints)\hfill}
+
+\hpword{Pontos:}
+\vpword{Pontos}
+\htword{Total}
+\vtword{Total}
+\vsword{Nota}
+\vqword{Questão}
+
+
+\newcommand{\insertquote}{\iflastpage{\vfill \epigraph{I have no idols. I admire work, dedication and competence}{Ayrton Senna}}{\hfill Continua \ldots}}
+\newcommand{\data}{15 de junho de 2015}
+\newcommand{\instituto}{Instituto Federal de Educação, Ciência e Tecnologia de Brasília}
+\newcommand{\campus}{Câmpus Taguatinga}
+\newcommand{\curso}{Ciência da Computação}
+\newcommand{\disciplina}{Estrutura de Dados e Algoritmos}
+\newcommand{\assunto}{Algoritmos, Alocação Dinâmica e Ordenação}
+\newcommand{\professor}{Prof. Daniel Saad Nogueira Nunes}
+\newcommand{\semestre}{1$^\circ$/2017}
+\newcommand{\duracao}{Duração da prova: 100 minutos}
+\newcommand{\prova}{Prova I}
+\newcommand{\cabecalho}{
+	
+	\instituto{} -- \campus\\
+	\curso{} -- \disciplina\\
+	\prova{} -- \semestre{} -- \assunto\\
+	\professor
+}
+\begin{document}
+
+\begin{center}
+	\includegraphics[scale=0.3]{IFBVertical.png}
+	\cabecalho
+\end{center}
+
+
+
+\vspace{5mm}
+
+\begin{minipage}[b]{1.0\linewidth}
+	Aluno:\enspace\hbox to 110mm{\hrulefill}\\
+	Matrícula:\enspace\hbox to 104mm{\hrulefill}\\
+	Data: \data
+\end{minipage}
+
+\begin{center}
+	\fbox{ \duracao}
+\end{center}
+
+\begin{center}
+	Tabela de notas (uso exclusivo do professor)\\
+	\addpoints
+	\gradetable[v][questions]
+\end{center}
+
+
+\subsection*{Observações}
+\begin{itemize}
+	\item Esta prova tem o total de \numpages\ páginas (incluindo a capa) e \numquestions\ questões.
+	\item O número total de pontos é \numpoints.
+	\item Certifique-se de assinar todas as folhas de resposta bem como a capa da prova.
+	\item Leia atentamente todas as questões da prova. A interpretação do problema é crucial para o desenvolvimento correto da resposta.
+	\item Resoluções sem justificativa não serão consideradas.
+	\item É vedado o uso de equipamentos eletrônicos, como celulares, notebooks entre outros.
+	\item A prova será \textbf{anulada} e medidas disciplinares serão tomadas para os alunos que ``colarem'' durante a avaliação. 
+	
+\end{itemize}
+
+
+\newpage
+
+\begin{questions}
+	
+	\question[2] Qual a cor do céu?
+	\question[2] Que dia é hoje?
+	\question[2] Qual é o seu nome?
+	\question[2] Quantos anos você tem?
+	\question[2] De acordo com a aritmética:
+	\begin{parts}
+		\noaddpoints
+		\part[1] 2+2?
+		\part[1] 1+1?
+		\addpoints
+	\end{parts}
+	{\insertquote}
+	\extrafootheight{10mm}
+\end{questions}
+	
+	
+
+\end{document}
