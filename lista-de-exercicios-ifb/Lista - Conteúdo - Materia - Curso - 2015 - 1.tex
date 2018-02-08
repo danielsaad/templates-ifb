@@ -1,0 +1,81 @@
+% Arquivo editável LaTeX para elaboração de listas de exercícios. 
+% É baseado na classe exam do LaTeX.
+% Copyright (C) 2018  Daniel Saad Nogueira Nunes (daniel.nunes@ifb.edu.br)
+
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+
+\documentclass[12pt,a4paper]{exam}
+\usepackage{amsmath,amssymb}
+\usepackage{epigraph}
+\usepackage[english,brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumerate}
+\usepackage[pdftex]{graphicx}
+\usepackage{color}
+\usepackage{cancel}
+\pagestyle{headandfoot}
+\runningheadrule
+\footer{}{}%
+{\iflastpage{}{}}
+\extrafootheight{10mm}
+
+\extrawidth{10mm}
+\shadedsolutions
+%\boxedpoints2
+%\nopointsinmargin
+\pointpoints{ ponto}{ pontos}
+\pointname{ \points}
+%\marginpointname{ \points}
+\qformat{\textbf{\large{Exercício} \thequestion} \quad \hfill}
+ 
+
+% Inserir as informações aqui
+\newcommand{\instituto}{Instituto Federal de Educação, Ciência e Tecnologia de Brasília{ }}
+\newcommand{\campus}{Câmpus Taguatinga}
+\newcommand{\curso}{Ciência da Computação{ }}
+\newcommand{\disciplina}{Análise de Algoritmos}
+\newcommand{\assunto}{Gerência de Processos}
+\newcommand{\professor}{Prof. Daniel Saad Nogueira Nunes}
+\newcommand{\cabecalho}{
+	
+	\instituto -- \campus\\
+	\curso -- \disciplina\\
+	Lista de Exercícios -- \assunto\\
+	\professor
+}
+\begin{document}
+
+
+\begin{center}
+\includegraphics[scale=0.3]{IFBVertical.png}
+\cabecalho
+\end{center}
+
+
+\vspace{5mm}
+
+\begin{minipage}[b]{1.0\linewidth}
+  Aluno:\enspace\hbox to 110mm{\hrulefill}\\
+  Matrícula:\enspace\hbox to 104mm{\hrulefill}
+\end{minipage}
+
+\begin{questions}
+	\question Exercício 1.
+	\question Exercício 2.
+	\question Exercício 3.
+\end{questions}
+\end{document}
