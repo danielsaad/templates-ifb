@@ -1,0 +1,82 @@
+%% abtex2-modelo-relatorio-tecnico.tex, v<VERSION> laurocesar
+%% Copyright 2012-2015 by abnTeX2 group at http://www.abntex.net.br/ 
+%%
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%   http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2005/12/01 or later.
+%%
+%% This work has the LPPL maintenance status `maintained'.
+%% 
+%% The Current Maintainer of this work is the abnTeX2 team, led
+%% by Lauro César Araujo. Further information are available on 
+%% http://www.abntex.net.br/
+%%
+%% This work consists of the files abntex2-modelo-relatorio-tecnico.tex,
+%% abntex2-modelo-include-comandos and abntex2-modelo-references.bib
+%%
+
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% abnTeX2: Modelo de Relatório Técnico/Acadêmico em conformidade com 
+% ABNT NBR 10719:2011 Informação e documentação - Relatório técnico e/ou
+% científico - Apresentação
+% Adaptado por Daniel Saad Nogueira Nunes para uso no IFB Taguatinga.
+% ------------------------------------------------------------------------ 
+% ------------------------------------------------------------------------
+
+
+% Coloque opção para bacharelado ou Licenciatura
+\documentclass[licenciatura]{pre-projeto-computacao}
+
+% ---
+% Informações de dados para CAPA e FOLHA DE ROSTO
+% ---
+\titulo{Título do Pré-projeto}
+\autor{Virgulino Ferreira da Silva}
+\orientador{Padre Cícero}
+\coorientador[Coorientadora:]{Maria Bonita}
+
+% Linha de pesquisa conforme tabela de áreas do CNPq
+\areadepesquisa{1.03.01.01-1 Computabilidade e Modelos de Computação }
+\local{Brasília, DF}
+\data{2018}
+
+\begin{document}
+
+\selectlanguage{brazil}
+\frenchspacing 
+\imprimircapa
+\imprimirfolhaderosto*
+
+
+
+
+\section*{Introdução}
+	Este modelo visa adaptar a classe ABNTeX2 para utilização no IFB Taguatinga como documento de Anteprojeto necessário para matrícula em TCC1.
+	
+	
+	Neste modelo, apresentamos uma \textbf{sugestão} de seções adotadas, nela se enquadrado: Introdução, Revisão da Literatura, Justificativa, Proposta, Metodologia e Cronograma e Descrição Orçamentária do Projeto. O aluno e orientador podem adotar outra divisão se acharem conveniente.
+	
+	A bibliografia deve seguir o padrão estabelecido pela classe ABNTeX2 \cite{abntex2modelo-relatorio}.
+	
+	A introdução deverá contextualizar o problema e motivar o leitor.
+\section*{Revisão da Literatura}
+
+\section*{Justificativa}
+
+\section*{Proposta}
+
+\subsection*{Objetivos Gerais}
+\subsection*{Objetivos Específicos}
+
+\section*{Metodologia}
+
+\section*{Cronograma e Descrição Orçamentária do Projeto}
+
+
+\bibliography{bibliografia}
+\end{document}
