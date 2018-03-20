@@ -23,7 +23,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{pre-projeto-computacao}[2018/03/18 Pré-Projeto para os cursos de Computação do IFB Taguatinga]
 \DeclareOption{bacharelado}{\newcommand{\curso}{Bacharelado em Ci\^encia da Computa\c{c}\~ao}}
-\DeclareOption{licenciatura}{\newcommand{\curso}{Licenciatura Computa\c{c}\~ao}}
+\DeclareOption{licenciatura}{\newcommand{\curso}{Licenciatura em Computa\c{c}\~ao}}
 \ProcessOptions
 \LoadClass[
 	% -- opções da classe memoir --
@@ -101,8 +101,6 @@
 
 \newcommand{\imprimirareadepesquisa}{\@areadepesquisa}
 
-
-
 % ---
 
 % ---
@@ -166,7 +164,7 @@
 \tipotrabalho{Pré-projeto}
 % O preambulo deve conter o tipo do trabalho, o objetivo, 
 % o nome da instituição e a área de concentração 
-\preambulo{Documento apresentado como requisito parcial para matrícula da disciplina de PCC do curso superior de \curso}
+\preambulo{Documento apresentado como requisito parcial para matrícula na disciplina de Projeto de Conclusão de Curso do curso superior de \curso}
 
 
 % alterando a capa
@@ -248,6 +246,9 @@
 }
 
 \makeatother
+
+
+
  
 % ---
 % FIM DAS CUSTOMIZACOES PARA IFB Taguatinga

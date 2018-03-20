@@ -29,7 +29,7 @@
 % ------------------------------------------------------------------------
 
 
-% Coloque opção para bacharelado ou Licenciatura
+% Como opção escolha 'bacharelado' ou 'licenciatura'
 \documentclass[licenciatura]{pre-projeto-computacao}
 
 % ---
@@ -37,11 +37,13 @@
 % ---
 \titulo{Título do Pré-projeto}
 \autor{Virgulino Ferreira da Silva}
+% para feminino use \orientador[Orientadora: ]{Nome da orientadora}
 \orientador{Padre Cícero}
+% para masculino use \coorientador{Nome do coorientador}
 \coorientador[Coorientadora:]{Maria Bonita}
 
 % Linha de pesquisa conforme tabela de áreas do CNPq
-\areadepesquisa{1.03.01.01-1 Computabilidade e Modelos de Computação }
+\areadepesquisa{Computabilidade e Modelos de Computação }
 \local{Brasília, DF}
 \data{2018}
 
@@ -50,33 +52,35 @@
 \selectlanguage{brazil}
 \frenchspacing 
 \imprimircapa
-\imprimirfolhaderosto*
-
+\imprimirfolhaderosto
 
 
 
 \section*{Introdução}
-	Este modelo visa adaptar a classe ABNTeX2 para utilização no IFB Taguatinga como documento de Anteprojeto necessário para matrícula em TCC1.
+	Este modelo visa adaptar a classe ABNTeX2 para utilização no IFB Taguatinga como documento de Pré-projeto, o qual deverá ser submetido para matrícula na disciplina de Projeto de Conclusão de Curso.
 	
-	
-	Neste modelo, apresentamos uma \textbf{sugestão} de seções adotadas, nela se enquadrado: Introdução, Revisão da Literatura, Justificativa, Proposta, Metodologia e Cronograma e Descrição Orçamentária do Projeto. O aluno e orientador podem adotar outra divisão se acharem conveniente.
+	Neste modelo, apresentamos apenas uma \textbf{sugestão} de seções adotadas com as suas breves descrições. O aluno e orientador podem adotar outra divisão se acharem conveniente.
 	
 	A bibliografia deve seguir o padrão estabelecido pela classe ABNTeX2 \cite{abntex2modelo-relatorio}.
 	
-	A introdução deverá contextualizar o problema e motivar o leitor.
-\section*{Revisão da Literatura}
-
-\section*{Justificativa}
+	A introdução deverá contextualizar o tema de estudo e introduzir o problema a ser tratado
 
 \section*{Proposta}
+	A proposta do trabalho deverá ser enquadrada neste espaço.
 
+\section*{Justificativa}
+	Destacar a importância da pesquisa sobre o tema adotado.	
+
+\section*{Objetivos}
+	Explicar os objetivos gerais e específicos.
 \subsection*{Objetivos Gerais}
 \subsection*{Objetivos Específicos}
 
 \section*{Metodologia}
+	Especificar a metodologia adotada para o desenvolvimento do trabalho.
 
 \section*{Cronograma e Descrição Orçamentária do Projeto}
-
+	Inserir o cronograma do desenvolvimento do TCC bem como a descrição orçamentária para o desenvolvimento do trabalho.
 
 \bibliography{bibliografia}
 \end{document}
