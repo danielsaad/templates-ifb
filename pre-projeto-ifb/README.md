@@ -1,4 +1,4 @@
-#Template Pré-projeto IFB Taguatinga
+# Template Pré-projeto IFB Taguatinga
 
 Template para elaboração do Pré-projeto dos  curso superiores de Bacharelado em Ciência da Computação e Licenciatura em Computação
 
