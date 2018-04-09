@@ -16,74 +16,14 @@
 % along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-\documentclass[12pt,addpoints,a4paper]{exam}
-\usepackage{amsmath,amssymb}
-\usepackage{epigraph}
-\usepackage[english,brazil]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{datetime}
-\usepackage{enumerate}
-\usepackage{url}
-\usepackage{bussproofs}
+\documentclass[12pt,addpoints,a4paper]{prova-ifb}
 
-
-
-
-%%para inclusão de figuras: jpg, pdf, mps, png
-\usepackage[pdftex]{graphicx}
-\usepackage{color}
-\usepackage{cancel}%%\cancelto{<value>}{<expression>}
-%\newcommand{\docdate}{\today}
-%\renewcommand{\solutiontitle}{\noident\textbf{Solução:}}\par\noident
-\pagestyle{headandfoot}
-\runningheadrule
-\footer{$\star$ Certifique-se de assinar todas as folhas de resposta.}{}%
-{\iflastpage{}{}}
-\extrafootheight{10mm}
-
-\extrawidth{10mm}
-\shadedsolutions
-%\boxedpoints2
-%\nopointsinmargin
-\pointpoints{ ponto}{ pontos}
-\pointname{ \points}
-%\marginpointname{ \points}
-\qformat{\textbf{\large{Questão} \thequestion} \quad (\thepoints)\hfill}
-
-\hpword{Pontos:}
-\vpword{Pontos}
-\htword{Total}
-\vtword{Total}
-\vsword{Nota}
-\vqword{Questão}
-
-
-\newcommand{\insertquote}{\iflastpage{\vfill \epigraph{I have no idols. I admire work, dedication and competence}{Ayrton Senna}}{\hfill Continua \ldots}}
-\newcommand{\data}{15 de junho de 2015}
-\newcommand{\instituto}{Instituto Federal de Educação, Ciência e Tecnologia de Brasília}
-\newcommand{\campus}{Câmpus Taguatinga}
-\newcommand{\curso}{Ciência da Computação}
-\newcommand{\disciplina}{Estrutura de Dados e Algoritmos}
-\newcommand{\assunto}{Algoritmos, Alocação Dinâmica e Ordenação}
-\newcommand{\professor}{Prof. Daniel Saad Nogueira Nunes}
-\newcommand{\semestre}{1$^\circ$/2017}
-\newcommand{\duracao}{Duração da prova: 100 minutos}
-\newcommand{\prova}{Prova I}
-\newcommand{\cabecalho}{
-	
-	\instituto{} -- \campus\\
-	\curso{} -- \disciplina\\
-	\prova{} -- \semestre{} -- \assunto\\
-	\professor
-}
 \begin{document}
 
 \begin{center}
 	\includegraphics[scale=0.3]{IFBVertical.png}
 	\cabecalho
 \end{center}
-
 
 
 \vspace{5mm}
@@ -133,8 +73,8 @@
 		\part[1] 1+1?
 		\addpoints
 	\end{parts}
-	{\insertquote}
-	\extrafootheight{10mm}
+	\begin{citacao}{A vingança nunca é plena, mata a alma e a envenena}{Seu Madruga}
+	\end{citacao}
 \end{questions}
 	
 	
