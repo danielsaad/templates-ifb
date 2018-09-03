@@ -16,7 +16,7 @@
 
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{aula-ifb}[2017/03/25 Classe para aulas no IFB]
+\ProvidesClass{aulaifb}[2017/03/25 Classe para aulas no IFB]
 % Extenderemos a classe Beamer
 \LoadClass{beamer}
 
