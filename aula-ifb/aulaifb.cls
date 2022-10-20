@@ -109,7 +109,7 @@ watermarkheightmult=10,% The watermark image is 4 times bigger
 	\end{frame}
 }
 
-\newenvironment{sumarioS}{
+\AtBeginSection[]{
 	\begin{frame}
 		\frametitle{Sumário}
 		\tableofcontents[
@@ -120,7 +120,7 @@ watermarkheightmult=10,% The watermark image is 4 times bigger
 }
 
 
-\newenvironment{sumarioSS}{
+\AtBeginSubsection[]{
 	\begin{frame}
 		\frametitle{Sumário}
 		\tableofcontents[
@@ -157,5 +157,5 @@ watermarkheightmult=10,% The watermark image is 4 times bigger
 \author{Prof. Daniel Saad Nogueira Nunes}
 \title{Título da Aula}
 \subtitle{Disciplina -- Curso}
-\institute{IFB -- Instituto Federal de Brasília\\ Câmpus Taguatinga}
+\institute{IFB -- Instituto Federal de Brasília\\ Campus Taguatinga}
 \date{}

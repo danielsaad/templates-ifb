@@ -32,8 +32,7 @@
 \RequirePackage[boxed,algoruled,linesnumbered,vlined,longend]{algorithm2e}
 \RequirePackage{amsfonts,amsmath,amssymb}
 \RequirePackage{color,colortbl}
-
-
+\RequirePackage{calc}
 
 %%para inclusão de figuras: jpg, pdf, mps, png
 \RequirePackage[pdftex]{graphicx}
@@ -43,7 +42,9 @@
 \pagestyle{headandfoot}
 \runningheadrule
 
-\footer{$\star$ Certifique-se de assinar todas as folhas de resposta.}{}%
+\footer{$\star$ Certifique-se de assinar todas as folhas de respostas.\\ \begin{flushright}
+	Página \thepage{} de \numpages
+\end{flushright}}{}%
 {\iflastpage{}{}}
 \extrafootheight{10mm}
 
@@ -63,25 +64,35 @@
 \vsword{Nota}
 \vqword{Questão}
 
-\newcommand{\citacao}[2]{{\iflastpage{\vfill \epigraph{#1}{#2}\extrafootheight{10mm}}{\hfill Continua \ldots}}}
-\newcommand{\data}[1][\today]{#1}
-\newcommand{\instituto}[1][Instituto Federal de Educação, Ciência e Tecnologia de Brasília]{#1}
-\newcommand{\campus}[1][Câmpus Taguatinga]{#1}
-\newcommand{\curso}[1][Ciência da Computação]{#1}
-\newcommand{\disciplina}[1][Estrutura de Dados e Algoritmos]{#1}
-\newcommand{\assunto}{Algoritmos, Alocação Dinâmica e Ordenação}
-\newcommand{\professor}{Prof. Daniel Saad Nogueira Nunes}
-\newcommand{\semestre}{1$^\circ$/2017}
-\newcommand{\duracao}{Duração da prova: 100 minutos}
-\newcommand{\prova}{Prova I}
-\newcommand{\cabecalho}{
-	
-	\instituto{} -- \campus\\
-	\curso{} -- \disciplina\\
-	\prova{} -- \semestre{} -- \assunto\\
-	\professor
+\newcommand{\mostracitacao}[2]{{\iflastpage{\vfill \epigraph{#1}{#2}\extrafootheight{10mm}}{\hfill Continua \ldots}}}
+\newcommand{\mostradata}[1][\today]{#1}
+\newcommand{\mostrainstituto}[1][Instituto Federal de Educação, Ciência e Tecnologia de Brasília]{#1}
+\newcommand{\mostracampus}[1][Campus Taguatinga]{#1}
+\newcommand{\mostracurso}[1][Ciência da Computação]{#1}
+\newcommand{\mostradisciplina}[1][Teoria da Computação]{#1}
+\newcommand{\mostraassunto}[1][Máquinas de Turing]{#1}
+\newcommand{\mostraprofessor}[1][Prof. Daniel Saad Nogueira Nunes]{#1}
+\newcommand{\mostrasemestre}[1][1$^\circ$/2017]{#1}
+\newcommand{\mostraduracao}[1][Duração da prova: 100 minutos]{Duração da prova: {#1} minutos}
+\newcommand{\mostraprova}[1][Prova I]{Prova {#1}}
+\newcommand{\cabecalho}{	
+	\mostrainstituto{} -- \mostracampus\\
+	\mostradisciplina{} -- \mostracurso \\
+	\mostraprova{} -- \mostrasemestre{} -- \mostraassunto{}\\
+	\mostraprofessor
 }
 
+\newcommand{\data}[1]{\renewcommand{\mostradata}{#1}}
+\newcommand{\instituto}[1]{\renewcommand{\mostrainstituto}{#1}}
+\newcommand{\campus}[1]{\renewcommand{\mostracampus}{#1}}
+\newcommand{\curso}[1]{\renewcommand{\mostracurso}{#1}}
+\newcommand{\disciplina}[1]{\renewcommand{\mostradisciplina}{#1}}
+\newcommand{\assunto}[1]{\renewcommand{\mostraassunto}{#1}}
+\newcommand{\professor}[1]{\renewcommand{\mostraprofessor}{#1}}
+\newcommand{\semestre}[1]{\renewcommand{\mostrasemestre}{#1}}
+\newcommand{\duracao}[1]{\renewcommand{\mostraduracao}{Duração: #1 minutos}}
+\newcommand{\prova}[1]{\renewcommand{\mostraprova}{Prova #1}}
+\newcommand{\citacao}[2]{\mostracitacao{#1}{#2}}
 
 
 \SetKwFor{For}{for$($}{$)$}{}
@@ -94,5 +105,43 @@
 \SetFuncSty{textsc}
 \DontPrintSemicolon
 
+\renewcommand{\maketitle}{
+		\begin{coverpages}
+		\begin{titlepage}
+		\begin{center}
+			\includegraphics[scale=0.3]{IFBVertical.png}
 
 
+			\cabecalho
+		\end{center}
+		\begin{minipage}[b]{1.0\linewidth}
+			Aluno:\enspace\hbox to 110mm{\hrulefill}\\
+			Matrícula:\enspace\hbox to 104mm{\hrulefill}\\
+			Data: \mostradata
+		\end{minipage}
+
+		\begin{center}
+			\fbox{\mostraduracao}
+		\end{center}
+
+		\begin{center}
+			Tabela de notas (uso exclusivo do professor)\\
+			\addpoints
+			\gradetable[v][questions]
+		\end{center}
+
+
+		\subsection*{Observações}
+		\begin{itemize}
+			\item Esta prova tem o total de \totalnumpages{} páginas (excluindo a capa) e \numquestions\ questões.
+			\item O número total de pontos é \numpoints.
+			\item Certifique-se de assinar todas as folhas de respostas bem como a capa da prova.
+			\item Leia atentamente todas as questões da prova. A interpretação do problema é crucial para o desenvolvimento correto da resposta.
+			\item Resoluções sem justificativa não serão consideradas.
+			\item É vedado o uso de equipamentos eletrônicos, como celulares, notebooks entre outros.
+			\item A prova será \textbf{anulada} e medidas disciplinares serão tomadas nos casos de de plágio.
+			
+		\end{itemize}
+	\end{titlepage}
+\end{coverpages}
+}
